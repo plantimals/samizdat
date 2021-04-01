@@ -1,3 +1,6 @@
+
+to read this document directly from IPFS (via a gateway):  [click here](https://gateway.ipfs.io/ipns/samizdat.me/)
+
 # samizdat
 
 self-published markdown, packaged for the distributed web. 
