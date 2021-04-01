@@ -1,37 +1,35 @@
 <!doctype html>
 <html>
-<head>
-  <title>самизда́т</title>
-  <meta charset="utf-8"/>
-  <!-- <script src="/marked.min.js"></script>
-  <link rel="stylesheet" href="/retro.css"> -->
-</head>
-<body>
-  <script>
-    url = window.location.href.replace('/index.html', '');
+  <head>
+    <title>самизда́т</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <script>
+      url = window.location.href.replace('/index.html', '');
 
-    var link = document.createElement('link');
-    link.rel = 'stylesheet'
-    link.type = 'text/css';
-    link.href = url+'retro.css'
-    document.head.appendChild(link)
+      var link = document.createElement('link');
+      link.rel = 'stylesheet'
+      link.type = 'text/css';
+      link.href = url+'retro.css'
+      document.head.appendChild(link)
 
-    var script = document.createElement('script')
-    script.src = url+'marked.min.js'
-    document.head.appendChild(script)
+      var script = document.createElement('script')
+      script.src = url+'marked.min.js'
+      document.head.appendChild(script)
 
-    fetch(url+'/index.md',{
-          headers : { 
-            'Content-Type': 'text/html',
-            'Accept': 'text/html'
-           }
-         })  //page)
-        .then(response => response.text())
-        .then((data) => {
-            document.getElementById('content').innerHTML = marked(data);
-        })
+      fetch(url+'/index.md',{
+            headers : { 
+              'Content-Type': 'text/html',
+              'Accept': 'text/html'
+            }
+          })  
+          .then(response => response.text())
+          .then((data) => {
+              document.getElementById('content').innerHTML = marked(data);
+          })
 
-  </script>
-  <div id="content"></div>
-</body>
+    </script>
+    <div id="content"></div>
+  </body>
 </html>
